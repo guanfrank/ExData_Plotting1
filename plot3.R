@@ -4,12 +4,8 @@ subEPC  <- read.csv.sql("household_power_consumption.txt", header=TRUE, sep=';',
 subEPC$datetime <- strptime(paste(subEPC$Date,subEPC$Time), "%d/%m/%Y %H:%M")
 
 # Plot the Data!
-<<<<<<< HEAD
-png("plot3.png",width=480,height=480,units="px",bg="transparent")
-=======
 
-png("plot3.png",width=480,height=480,units="px")
->>>>>>> 4566463e7ef54bce874a0c6b7bc3c79c92ca0c6c
+png("plot3.png",width=480,height=480,units="px",bg="transparent")
 
 plot(subEPC$datetime, subEPC$Sub_metering_1, xlab ="", ylab = "Energy sub metering",type ="l",col = 'black')
 
